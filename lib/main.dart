@@ -12,6 +12,10 @@ void main() async {
 final firestoreInstance = FirebaseFirestore.instance;
 bool connected = false;
 
+/**
+ * Home: page de login
+ */
+
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

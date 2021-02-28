@@ -5,6 +5,11 @@ import 'package:miaged_montorsi/clothes_detail.dart';
 import 'package:miaged_montorsi/panier.dart';
 import 'package:miaged_montorsi/profile.dart';
 
+//inspiré de https://codelabs.developers.google.com/codelabs/flutter-firebase/index.html#8 pour la création de la liste
+
+/**
+ * ClothesList: liste des vêtements disponibles sur l'application
+ */
 class ClothesList extends StatelessWidget {
   String loggedUser = "";
 
@@ -238,6 +243,7 @@ void _changedDropDownItem(int newValue) {
 }
 
 //afficher les détails des vêtements
+//inspiré de https://codelabs.developers.google.com/codelabs/flutter-firebase/index.html#4
 class Record {
   final String brand, image_link, title, size;
   final int price;

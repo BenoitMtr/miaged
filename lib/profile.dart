@@ -5,6 +5,9 @@ import 'package:miaged_montorsi/clothes_list.dart';
 import 'package:miaged_montorsi/main.dart';
 import 'package:miaged_montorsi/panier.dart';
 
+/**
+ * Profile: afficher le profil utilisateur
+ */
 class Profile extends StatelessWidget {
   String loggedUser = "";
 
@@ -63,7 +66,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   builder: (BuildContext context) {
                     updateBase();
                     return AlertDialog(
-                        title: Text("Panier sauvegardé"),
+                        title: Text("Profil sauvegardé"),
                         content: Text("Les informations sont sauvegardées"),
                         actions: [
                           FlatButton(
@@ -145,7 +148,7 @@ class _ProfilePageState extends State<ProfilePage> {
               return Text('Press button to start.');
             case ConnectionState.active:
             case ConnectionState.waiting:
-              print("PRINT 1");
+              print("WAITING");
               break;
             case ConnectionState.done:
               {
@@ -254,12 +257,8 @@ class _ProfilePageState extends State<ProfilePage> {
                 );
               }
 
-            // You can reach your snapshot.data['url'] in here
           }
           return Container();
-
-          // print("liste: "+snapshot.toString());
-          //  print("email: "+snapshot.toString());
         });
   }
 
@@ -280,13 +279,6 @@ class _ProfilePageState extends State<ProfilePage> {
       infos.add(datasnapshot.data()["postal_code"]);
       infos.add(datasnapshot.data()["username"]);
 
-      /* infos["address"] = datasnapshot.data()["address"];
-                                          infos["birthday"] = datasnapshot.data()["birthday"];
-                                          infos["city"] = datasnapshot.data()["city"];
-                                          infos["email"] = datasnapshot.data()["email"];
-                                          infos["password"] = datasnapshot.data()["password"];
-                                          infos["postal_code"] = datasnapshot.data()["postal_code"];
-                                          infos["username"] = datasnapshot.data()["username"];*/
       print("liste:" + infos.toString());
     });
     return infos;

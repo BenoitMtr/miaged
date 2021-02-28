@@ -5,9 +5,11 @@ import 'package:miaged_montorsi/clothes_detail.dart';
 
 import 'clothes_list.dart';
 
+/**
+ * Panier: afficher le panier de l'utilisateur, avec le prix total de ses articles ajoutés
+ */
 class Panier extends StatelessWidget {
   String loggedUser = "";
-  //List<String> panierId = [];
 
   Panier({Key key, @required this.loggedUser}) : super(key: key);
 
@@ -22,7 +24,6 @@ class Panier extends StatelessWidget {
 
 class PanierPage extends StatefulWidget {
   String loggedUser = "";
-  // List<String> panierId = [];
 
   PanierPage(String loggedUser) {
     this.loggedUser = loggedUser;
@@ -118,7 +119,6 @@ class _PanierPageState extends State<PanierPage> {
 
                   )],
               ),
-                      //Text("Taille: " +snapshot?.data[index]?.size.toString() ?? "" +"     Prix: "+snapshot?.data[index]?.price.toString() ?? ""+"€"),
                   
                     onTap: () {
                       Navigator.push(
@@ -137,7 +137,6 @@ class _PanierPageState extends State<PanierPage> {
                     },
                   ));
                 });
-            //return _buildListItem(context, articles[index]);
           });
     } catch (e) {
       print(e);
@@ -188,6 +187,7 @@ class _PanierPageState extends State<PanierPage> {
                 children: [
                   Expanded(child: _buildList(context)),
                   new Container(
+                    margin: const EdgeInsets.only(top: 20.0),
                     child: new Text(
                       "Prix total: "+
                       snapshot.data.toString(),
@@ -270,6 +270,8 @@ class _PanierPageState extends State<PanierPage> {
 }
 
 //afficher les détails des vêtements
+//inspiré de https://codelabs.developers.google.com/codelabs/flutter-firebase/index.html#4
+
 class Record {
   String id, brand, image_link, title, size;
   int price;
