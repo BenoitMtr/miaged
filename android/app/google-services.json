@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "905343176253",
+    "project_id": "miaged-montorsi",
+    "storage_bucket": "miaged-montorsi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:905343176253:android:1d28c3458ea3f0c9a02454",
+        "android_client_info": {
+          "package_name": "com.example.miaged_montorsi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "905343176253-j020v6853rdt8srod9j02blnivkgbbv1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCt8w6NUNozDt8jwaHjxSp31aKEHbl5N5s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "905343176253-j020v6853rdt8srod9j02blnivkgbbv1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
