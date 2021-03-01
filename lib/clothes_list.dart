@@ -1,4 +1,3 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:miaged_montorsi/clothes_detail.dart';
@@ -7,9 +6,8 @@ import 'package:miaged_montorsi/profile.dart';
 
 //inspiré de https://codelabs.developers.google.com/codelabs/flutter-firebase/index.html#8 pour la création de la liste
 
-/**
- * ClothesList: liste des vêtements disponibles sur l'application
- */
+/// ClothesList: liste des vêtements disponibles sur l'application
+
 class ClothesList extends StatelessWidget {
   String loggedUser = "";
 

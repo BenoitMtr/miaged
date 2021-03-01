@@ -1,13 +1,11 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:miaged_montorsi/clothes_list.dart';
 import 'package:miaged_montorsi/main.dart';
 import 'package:miaged_montorsi/panier.dart';
 
-/**
- * Profile: afficher le profil utilisateur
- */
+/// Profile: afficher le profil utilisateur
+
 class Profile extends StatelessWidget {
   String loggedUser = "";
 

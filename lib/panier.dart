@@ -1,13 +1,11 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:miaged_montorsi/clothes_detail.dart';
 
 import 'clothes_list.dart';
 
-/**
- * Panier: afficher le panier de l'utilisateur, avec le prix total de ses articles ajoutés
- */
+/// Panier: afficher le panier de l'utilisateur, avec le prix total de ses articles ajoutés
+
 class Panier extends StatelessWidget {
   String loggedUser = "";
 
@@ -36,7 +34,6 @@ class PanierPage extends StatefulWidget {
 }
 
 class _PanierPageState extends State<PanierPage> {
-  int _selectedIndex = 0;
   List<String> panierId = [];
 
   String loggedUser = "";
@@ -91,7 +88,6 @@ class _PanierPageState extends State<PanierPage> {
                                   ),
                                 ));
                           }),
-                      //TODO ajouter Row avec 2 Text? (taille et prix)
                       subtitle: new Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
@@ -170,11 +166,6 @@ class _PanierPageState extends State<PanierPage> {
         });
   }
 
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
 
   Widget _buildBody(BuildContext context) {
     return FutureBuilder(
@@ -257,7 +248,6 @@ class _PanierPageState extends State<PanierPage> {
       panierId = datasnapshot.data()["panier"].cast<String>();
       print("length:"+panierId.length.toString());
       return datasnapshot.data()["panier"].cast<String>();
-      print(panierId);
     });
   }
 

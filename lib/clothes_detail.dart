@@ -1,11 +1,9 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:miaged_montorsi/clothes_list.dart';
 
-/**
- * ClothesDetail: afficher le détail d'un vêtement sélectionné dans la liste ou dans le panier
- */
+/// ClothesDetail: afficher le détail d'un vêtement sélectionné dans la liste ou dans le panier
+
 class ClothesDetail extends StatelessWidget {
   String id = "";
   String title = "";
@@ -186,7 +184,6 @@ void _onItemTapped(int index) {
   }
 
   void _addPanier() {
-    final firestoreInstance = FirebaseFirestore.instance;
     List<String> articles = [];
     DocumentReference currentPanier =
         Firestore.instance.collection("users").document(this.loggedUser);

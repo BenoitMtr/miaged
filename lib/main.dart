@@ -12,9 +12,8 @@ void main() async {
 final firestoreInstance = FirebaseFirestore.instance;
 bool connected = false;
 
-/**
- * Home: page de login
- */
+/// Home: page de login
+
 
 class Home extends StatelessWidget {
   @override
@@ -109,7 +108,6 @@ class _HomePageState extends State<HomePage> {
             if (this._email == doc["email"]) {
               if (this._password == doc["password"]) {
                 connected = true;
-                String username=doc["username"];
                 String id=doc.id;
                 print("bienvenue, " + doc.id);
                 Navigator.push(
